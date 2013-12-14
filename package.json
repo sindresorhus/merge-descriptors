@@ -1,7 +1,7 @@
 {
   "name": "merge-descriptors",
   "description": "Merge objects using descriptors",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
     "name": "Jonathan Ong",
     "email": "me@jongleberry.com",
@@ -11,11 +11,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jonathanong/merge-descriptors.git"
+    "url": "https://github.com/component/merge-descriptors.git"
   },
   "bugs": {
     "mail": "me@jongleberry.com",
-    "url": "https://github.com/jonathanong/merge-descriptors/issues"
+    "url": "https://github.com/component/merge-descriptors/issues"
   },
   "scripts": {
     "test": "make test;"
