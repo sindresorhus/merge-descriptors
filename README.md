@@ -22,7 +22,12 @@ animal.name === 'jon'
 
 ### merge(destination, source)
 
-Overwrites `destination`'s descriptors with `source`'s.
+Redefines `destination`'s descriptors with `source`'s.
+
+### merge(destination, source, false)
+
+Defines `source`'s descriptors on `destination` if `destination` does not have
+a descriptor by the same name.
 
 ## License
 
