@@ -16,8 +16,5 @@
   "bugs": {
     "mail": "me@jongleberry.com",
     "url": "https://github.com/component/merge-descriptors/issues"
-  },
-  "scripts": {
-    "test": "make test;"
   }
 }

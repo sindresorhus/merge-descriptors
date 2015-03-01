@@ -1,4 +1,4 @@
-# Merge Descriptors [![Build Status](https://travis-ci.org/component/merge-descriptors.png)](https://travis-ci.org/component/merge-descriptors)
+# Merge Descriptors
 
 Merge objects using descriptors.
 
