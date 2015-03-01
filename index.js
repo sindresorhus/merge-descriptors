@@ -21,6 +21,14 @@ module.exports = merge
  */
 
 function merge(dest, src) {
+  if (!dest) {
+    throw new TypeError('argument dest is required')
+  }
+
+  if (!src) {
+    throw new TypeError('argument src is required')
+  }
+
   Object.getOwnPropertyNames(src).forEach(function forEachOwnPropertyName(name) {
     var descriptor = Object.getOwnPropertyDescriptor(src, name)
     Object.defineProperty(dest, name, descriptor)
