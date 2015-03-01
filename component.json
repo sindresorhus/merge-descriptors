@@ -1,7 +1,7 @@
 {
   "name": "merge-descriptors",
   "description": "Merge objects using descriptors",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "scripts": [
     "index.js"
   ],
