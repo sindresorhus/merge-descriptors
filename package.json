@@ -9,7 +9,8 @@
     "twitter": "https://twitter.com/jongleberry"
   },
   "contributors": [
-    "Douglas Christopher Wilson <doug@somethingdoug.com>"
+    "Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "Mike Grabowski <grabbou@gmail.com>"
   ],
   "license": "MIT",
   "repository": {
@@ -20,9 +21,15 @@
     "mail": "me@jongleberry.com",
     "url": "https://github.com/component/merge-descriptors/issues"
   },
+  "devDependencies": {
+    "mocha": "1.21.5"
+  },
   "files": [
     "LICENSE",
     "README.md",
     "index.js"
-  ]
+  ],
+  "scripts": {
+    "test": "mocha --reporter spec --bail --check-leaks test/"
+  }
 }
