@@ -8,8 +8,12 @@
     "url": "http://jongleberry.com",
     "twitter": "https://twitter.com/jongleberry"
   },
+  "scripts": {
+    "test": "mocha --reporter spec --bail --check-leaks test/"
+  },
   "contributors": [
-    "Douglas Christopher Wilson <doug@somethingdoug.com>"
+    "Douglas Christopher Wilson <doug@somethingdoug.com>",
+    "Mike Grabowski <grabbou@gmail.com>"
   ],
   "license": "MIT",
   "repository": {
@@ -24,5 +28,9 @@
     "LICENSE",
     "README.md",
     "index.js"
-  ]
+  ],
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^6.0.3"
+  }
 }

@@ -57,3 +57,8 @@ npm-debug.log
 /build
 /components
 /vendors
+
+# IDE files #
+#############
+
+.idea
