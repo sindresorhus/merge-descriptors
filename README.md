@@ -1,6 +1,7 @@
 # Merge Descriptors
 
 [![Build Status][travis-image]][travis-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
 
 Merge objects using descriptors.
 
@@ -37,3 +38,5 @@ a descriptor by the same name.
 
 [travis-image]: https://img.shields.io/travis/component/merge-descriptors/master.svg
 [travis-url]: https://travis-ci.org/component/merge-descriptors
+[coveralls-image]: https://img.shields.io/coveralls/component/merge-descriptors/master.svg
+[coveralls-url]: https://coveralls.io/r/component/merge-descriptors?branch=master
