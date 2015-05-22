@@ -1,5 +1,7 @@
 # Merge Descriptors
 
+[![Build Status][travis-image]][travis-url]
+
 Merge objects using descriptors.
 
 ```js
@@ -32,3 +34,6 @@ a descriptor by the same name.
 ## License
 
 [MIT](LICENSE)
+
+[travis-image]: https://img.shields.io/travis/component/merge-descriptors/master.svg
+[travis-url]: https://travis-ci.org/component/merge-descriptors
