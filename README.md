@@ -1,5 +1,7 @@
 # Merge Descriptors
 
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
@@ -36,7 +38,11 @@ a descriptor by the same name.
 
 [MIT](LICENSE)
 
+[npm-image]: https://img.shields.io/npm/v/merge-descriptors.svg
+[npm-url]: https://npmjs.org/package/merge-descriptors
 [travis-image]: https://img.shields.io/travis/component/merge-descriptors/master.svg
 [travis-url]: https://travis-ci.org/component/merge-descriptors
 [coveralls-image]: https://img.shields.io/coveralls/component/merge-descriptors/master.svg
 [coveralls-url]: https://coveralls.io/r/component/merge-descriptors?branch=master
+[downloads-image]: https://img.shields.io/npm/dm/merge-descriptors.svg
+[downloads-url]: https://npmjs.org/package/merge-descriptors
