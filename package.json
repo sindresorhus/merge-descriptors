@@ -17,10 +17,6 @@
     "type": "git",
     "url": "https://github.com/component/merge-descriptors.git"
   },
-  "bugs": {
-    "mail": "me@jongleberry.com",
-    "url": "https://github.com/component/merge-descriptors/issues"
-  },
   "devDependencies": {
     "istanbul": "0.4.1",
     "mocha": "1.21.5"
