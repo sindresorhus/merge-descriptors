@@ -47,7 +47,7 @@ function merge (dest, src, redefine) {
 
   Object.getOwnPropertyNames(src).forEach(function forEachOwnPropertyName (name) {
     if (!redefine && hasOwnProperty.call(dest, name)) {
-      // Skip desriptor
+      // Skip descriptor
       return
     }
 
