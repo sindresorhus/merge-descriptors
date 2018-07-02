@@ -16,21 +16,21 @@ describe('merge(dest, src)', function () {
   describe('arguments', function () {
     describe('dest', function () {
       it('should be required', function () {
-        assert.throws(merge.bind(null, undefined), 'argument dest is required')
+        assert.throws(merge.bind(null, undefined), /argument dest is required/)
       })
 
       it('should reject null', function () {
-        assert.throws(merge.bind(null, null), 'argument dest is required')
+        assert.throws(merge.bind(null, null), /argument dest is required/)
       })
     })
 
     describe('src', function () {
       it('should be required', function () {
-        assert.throws(merge.bind(null, {}, undefined), 'argument src is required')
+        assert.throws(merge.bind(null, {}, undefined), /argument src is required/)
       })
 
       it('should reject null', function () {
-        assert.throws(merge.bind(null, {}, null), 'argument dest is required')
+        assert.throws(merge.bind(null, {}, null), /argument src is required/)
       })
     })
   })
