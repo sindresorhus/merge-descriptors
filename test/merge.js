@@ -4,13 +4,13 @@ var merge = require('..')
 var source = {
   name: 'John',
   surname: 'Doe'
-};
+}
 
 Object.defineProperty(source, 'fullName', {
-  get: function() {
-    return this.name + ' ' + this.surname;
+  get: function () {
+    return this.name + ' ' + this.surname
   }
-});
+})
 
 describe('merge(dest, src)', function () {
   describe('arguments', function () {
