@@ -50,7 +50,7 @@ describe('merge(dest, src)', function () {
 
       assert.ok(dest.hasOwnProperty('name'))
       assert.ok(Object.getOwnPropertyDescriptor(dest, 'name'))
-      assert.equal(Object.getOwnPropertyDescriptor(dest, 'name').value, 'TJ')
+      assert.strictEqual(Object.getOwnPropertyDescriptor(dest, 'name').value, 'TJ')
     })
 
     describe('when property exists in src', function () {
@@ -68,15 +68,15 @@ describe('merge(dest, src)', function () {
         })
 
         assert.ok(dest.hasOwnProperty('name'))
-        assert.equal(Object.getOwnPropertyDescriptor(dest, 'name').value, 'TJ')
+        assert.strictEqual(Object.getOwnPropertyDescriptor(dest, 'name').value, 'TJ')
         assert.ok(src.hasOwnProperty('name'))
-        assert.equal(Object.getOwnPropertyDescriptor(src, 'name').value, 'fido')
+        assert.strictEqual(Object.getOwnPropertyDescriptor(src, 'name').value, 'fido')
 
         merge(dest, src)
 
         assert.ok(dest.hasOwnProperty('name'))
         assert.ok(Object.getOwnPropertyDescriptor(dest, 'name'))
-        assert.equal(Object.getOwnPropertyDescriptor(dest, 'name').value, 'fido')
+        assert.strictEqual(Object.getOwnPropertyDescriptor(dest, 'name').value, 'fido')
       })
 
       it('should error when non-configurable', function () {
@@ -93,9 +93,9 @@ describe('merge(dest, src)', function () {
         })
 
         assert.ok(dest.hasOwnProperty('name'))
-        assert.equal(Object.getOwnPropertyDescriptor(dest, 'name').value, 'TJ')
+        assert.strictEqual(Object.getOwnPropertyDescriptor(dest, 'name').value, 'TJ')
         assert.ok(src.hasOwnProperty('name'))
-        assert.equal(Object.getOwnPropertyDescriptor(src, 'name').value, 'fido')
+        assert.strictEqual(Object.getOwnPropertyDescriptor(src, 'name').value, 'fido')
 
         assert.throws(merge.bind(null, dest, src), /Cannot redefine property: name/)
       })
@@ -114,15 +114,15 @@ describe('merge(dest, src)', function () {
         })
 
         assert.ok(dest.hasOwnProperty('name'))
-        assert.equal(Object.getOwnPropertyDescriptor(dest, 'name').value, 'TJ')
+        assert.strictEqual(Object.getOwnPropertyDescriptor(dest, 'name').value, 'TJ')
         assert.ok(src.hasOwnProperty('name'))
-        assert.equal(Object.getOwnPropertyDescriptor(src, 'name').value, 'fido')
+        assert.strictEqual(Object.getOwnPropertyDescriptor(src, 'name').value, 'fido')
 
         merge(dest, src, false)
 
         assert.ok(dest.hasOwnProperty('name'))
         assert.ok(Object.getOwnPropertyDescriptor(dest, 'name'))
-        assert.equal(Object.getOwnPropertyDescriptor(dest, 'name').value, 'TJ')
+        assert.strictEqual(Object.getOwnPropertyDescriptor(dest, 'name').value, 'TJ')
       })
     })
   })
