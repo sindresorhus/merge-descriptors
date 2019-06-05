@@ -8,7 +8,7 @@
 Merge source object "own" properties onto a destination object, including 
 non-enumerable "own" properties, and preserve each property's values and 
 descriptors. This means the destination object has a true copy of the source 
-object's properties, including their values and configuration.  In particular this 
+object's properties, including their values and configuration. In particular this 
 also copies over properties that are defined using a getter or a getter-setter 
 pair.
 
