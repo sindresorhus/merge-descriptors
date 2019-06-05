@@ -5,10 +5,11 @@
 [![Build Status][travis-image]][travis-url]
 [![Test Coverage][coveralls-image]][coveralls-url]
 
-Merge source object properties onto a destination object, and preserve 
-descriptors. Descriptors are configuration data associated to each property 
-such as whether the property is `writable`, `enumerable`, and/or `configurable`.
-This data will be preserved in the destination object.
+Merge source object "own" properties onto a destination object, including 
+non-enumerable "own" properties, and preserve each property's descriptors. 
+Descriptors are configuration data associated to each property such as whether 
+the property is `writable`, `enumerable`, and/or `configurable`.  This data 
+will be preserved in the destination object.
 
 ```js
 var thing = {
@@ -30,11 +31,12 @@ animal.name === 'jon'
 
 ### merge(destination, source, overwrite)
 
-Merge properties from `source` object onto `destination` object, preserving 
-each property's descriptors. The `overwrite` argument is optional and has 
-default value `true`. If `overwrite == true` then existing properties on 
-`destination` will be overwritten. If `overwrite == false`, existing properties 
-on `destination` will not be overwritten. Returns the destination object.
+Merge all "own" properties from `source` object onto `destination` object, 
+including non-enumerable "own" properties, preserving each property's descriptors. 
+The `overwrite` argument is optional and has default value `true`. If 
+`overwrite == true` then existing properties on `destination` will be overwritten. 
+If `overwrite == false`, existing properties on `destination` will not be 
+overwritten. Returns the destination object.
 
 ## License
 
