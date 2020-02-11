@@ -31,18 +31,13 @@ var hasOwnProperty = Object.prototype.hasOwnProperty
  * @public
  */
 
-function merge (dest, src, redefine) {
+function merge (dest, src, redefine = true) {
   if (!dest) {
     throw new TypeError('argument dest is required')
   }
 
   if (!src) {
     throw new TypeError('argument src is required')
-  }
-
-  if (redefine === undefined) {
-    // Default to true
-    redefine = true
   }
 
   Object.getOwnPropertyNames(src).forEach(function forEachOwnPropertyName (name) {
