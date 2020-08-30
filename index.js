@@ -5,7 +5,7 @@
  * MIT Licensed
  */
 
-'use strict';
+'use strict'
 
 /**
  * Merge the property descriptors of `src` into `dest`
@@ -18,29 +18,29 @@
  */
 const merge = (dest, src, redefine) => {
   if (!dest) {
-    throw new TypeError('argument dest is required');
+    throw new TypeError('argument dest is required')
   }
 
   if (!src) {
-    throw new TypeError('argument src is required');
+    throw new TypeError('argument src is required')
   }
 
   if (redefine === undefined) {
     // Default to true
-    redefine = true;
+    redefine = true
   }
 
   // Loop over `src` properties
-  const properties = Object.getOwnPropertyNames(src);
+  const properties = Object.getOwnPropertyNames(src)
   for (let i = 0, len = properties.length; i < len; ++i) {
-    const name = properties[i];
+    const name = properties[i]
     if (redefine || !(name in dest)) {
       // Copy property descriptor from `src` to `dest`
-      Object.defineProperty(dest, name, Object.getOwnPropertyDescriptor(src, name));
+      Object.defineProperty(dest, name, Object.getOwnPropertyDescriptor(src, name))
     }
   }
 
-  return dest;
-};
+  return dest
+}
 
-module.exports = merge;
+module.exports = merge
