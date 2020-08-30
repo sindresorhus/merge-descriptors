@@ -5,21 +5,7 @@
  * MIT Licensed
  */
 
-'use strict'
-
-/**
- * Module exports.
- * @public
- */
-
-module.exports = merge
-
-/**
- * Module variables.
- * @private
- */
-
-var hasOwnProperty = Object.prototype.hasOwnProperty
+'use strict';
 
 /**
  * Merge the property descriptors of `src` into `dest`
@@ -30,31 +16,31 @@ var hasOwnProperty = Object.prototype.hasOwnProperty
  * @returns {object} Reference to dest
  * @public
  */
-
-function merge (dest, src, redefine) {
+const merge = (dest, src, redefine) => {
   if (!dest) {
-    throw new TypeError('argument dest is required')
+    throw new TypeError('argument dest is required');
   }
 
   if (!src) {
-    throw new TypeError('argument src is required')
+    throw new TypeError('argument src is required');
   }
 
   if (redefine === undefined) {
     // Default to true
-    redefine = true
+    redefine = true;
   }
 
-  Object.getOwnPropertyNames(src).forEach(function forEachOwnPropertyName (name) {
-    if (!redefine && hasOwnProperty.call(dest, name)) {
-      // Skip descriptor
-      return
+  // Loop over `src` properties
+  const properties = Object.getOwnPropertyNames(src);
+  for (let i = 0, len = properties.length; i < len; ++i) {
+    const name = properties[i];
+    if (redefine || !(name in dest)) {
+      // Copy property descriptor from `src` to `dest`
+      Object.defineProperty(dest, name, Object.getOwnPropertyDescriptor(src, name));
     }
+  }
 
-    // Copy descriptor
-    var descriptor = Object.getOwnPropertyDescriptor(src, name)
-    Object.defineProperty(dest, name, descriptor)
-  })
+  return dest;
+};
 
-  return dest
-}
+module.exports = merge;
