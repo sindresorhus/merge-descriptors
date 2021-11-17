@@ -40,7 +40,7 @@ function merge (dest, src, redefine) {
     throw new TypeError('argument src is required')
   }
 
-  if (redefine === undefined) {
+  if (!redefine || typeof redefine !== "boolean") {
     // Default to true
     redefine = true
   }
