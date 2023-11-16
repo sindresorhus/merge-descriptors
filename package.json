@@ -13,7 +13,7 @@
     "Mike Grabowski <grabbou@gmail.com>"
   ],
   "license": "MIT",
-  "repository": "component/merge-descriptors",
+  "repository": "sindresorhus/merge-descriptors",
   "devDependencies": {
     "eslint": "5.9.0",
     "eslint-config-standard": "12.0.0",
